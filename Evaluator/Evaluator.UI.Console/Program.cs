@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Evaluator.Core;
+
+Console.WriteLine("##### Program Expression Evaluator #####");
+Console.WriteLine("");
+var infix = "3 + 5";
+var result = Expression.Evaluate(infix);
