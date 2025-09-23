@@ -14,8 +14,10 @@ namespace Evaluator.Core
         {
             var stack = new Stack<char>();
             var postfix = string.Empty;
-            foreach(char item in infix)
+            var number = string.Empty;
+            foreach (char item in infix)
             {
+                
                 if (IsOperator(item))
                 {
                     if (item == ')')
@@ -48,11 +50,11 @@ namespace Evaluator.Core
                 }
                 else
                 {
-                    while (char.IsDigit(item))
+                    if (item > 1)
                     {
-                        postfix += item;
-                        break;
+                        number += item;
                     }
+                    postfix += number;
                 }
             }
             while (stack.Count > 0)
