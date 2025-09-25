@@ -39,7 +39,9 @@ namespace Evaluator.Core
                 }
             }
             if (postfix != string.Empty)
+            {
                 tokens.Add(postfix);
+            }
 
             foreach (var token in tokens)
             {
