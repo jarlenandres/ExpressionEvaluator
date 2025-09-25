@@ -11,14 +11,7 @@ namespace Evaluator.Core
             Console.WriteLine(postfix);
             return Calculate(postfix);
         }
-        private static int PriorityInfix(string op) => op switch
-        {
-            "^" => 4,
-            "+" or "-" => 1,
-            "*" or "/" or "%" => 2,
-            _ => 0
-        };
-
+        
         private static string InfixToPostfix(string infix)
         {
             var output = new List<string>();
@@ -84,6 +77,14 @@ namespace Evaluator.Core
 
             return string.Join(" ", output);
         }
+
+        private static int PriorityInfix(string op) => op switch
+        {
+            "^" => 4,
+            "+" or "-" => 1,
+            "*" or "/" or "%" => 2,
+            _ => 0
+        };
 
         private static double Calculate(string postfix)
         {
