@@ -13,7 +13,7 @@ var result2 = Expression.EvaluateInfix(infix2);
 Console.WriteLine($"{infix2} = {result2}");
 Console.WriteLine("");
 
-var infix3 = "123*(4+6)";
+var infix3 = "123.325*(4.5+6.33)";
 var result3 = Expression.EvaluateInfix(infix3);
 Console.WriteLine($"{infix3} = {result3}");
 Console.WriteLine("");

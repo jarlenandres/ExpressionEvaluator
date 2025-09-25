@@ -21,7 +21,7 @@ namespace Evaluator.Core
             string postfix = string.Empty;
             foreach (char item in infix)
             {
-                if (char.IsDigit(item) || item == '.')
+                if (char.IsDigit(item) || item == '.' || item == ',')
                 {
                     postfix += item;
                 }
@@ -71,7 +71,6 @@ namespace Evaluator.Core
                     stack.Push(token);
                 }
             }
-
             while (stack.Count > 0)
             {
                 output.Add(stack.Pop());
